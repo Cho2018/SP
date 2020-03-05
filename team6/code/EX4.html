@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> EX4 </title>
+	<meta charset="euc-kr" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+	<section id="code" class="container">
+	<header>
+	<h3> 최대 공약수 찾기 </h3>
+	</header>
+	<pre>
+import java.util.Scanner;
+public class Gcd {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int x, y, r;
+
+		System.out.print("두 개의 정수를 입력하시오(큰 수, 작은 수): ");
+		x = input.nextInt();
+		y = input.nextInt();
+
+		while(y != 0)
+		{
+			r = x % y;
+			x = y;
+			y = r;
+		}
+
+		System.out.print("최대 공약수는 " + x);
+	}
+
+}
+	</pre>
+<form>
+  <input type="button" value="닫기" onclick="history.back()">
+</form>
+	</section>
+	</body>
+</html>

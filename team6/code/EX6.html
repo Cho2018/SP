@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> EX6 </title>
+	<meta charset="euc-kr" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+	<section id="code" class="container">
+	<header>
+	<h3> 지뢰찾기 게임하기 </h3>
+	</header>
+	<pre>
+public class MineSweeper {
+
+	public static void main(String[] args) {
+		boolean[][] board = new boolean[10][10];
+
+		for (int i = 0; i < 10; i++)
+		    for (int j = 0; j < 10; j++)
+			if (Math.random() < 0.3)
+			   board[i][j] = true;
+
+		for (int i = 0; i < 10; i++) {
+		    for (int j = 0; j < 10; j++)
+			if (board[i][j])
+			   System.out.print("# ");
+			else 
+			   System.out.print(". ");
+		    System.out.println();
+		}
+	}
+}
+	</pre>
+<form>
+  <input type="button" value="닫기" onclick="history.back()">
+</form>
+	</section>
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> EX3 </title>
+	<meta charset="euc-kr" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+	<section id="code" class="container">
+	<header>
+	<h3> 월의 일수 출력하기 </h3>
+	</header>
+	<pre>
+import java.util.*;
+public class DaysInMonth {
+
+	public static void main(String[] args) {
+		int month, day;
+		Date date = new Date();
+		int currentYear= date.getYear();
+		Scanner input = new Scanner(System.in);
+		System.out.print("일수를 알고 싶은 월을 입력하시오: ");
+		month = input.nextInt();
+
+		switch(month){
+		case 4:
+		case 6:
+		case 9:
+		case 11:
+			day = 30;
+			break;
+		case 2:
+			if (currentYear % 4 == 0 && currentYear % 100 != 0)
+				day = 29;
+			else
+				day = 28;
+			break;
+		default:
+			day = 31;
+			break;
+		}
+		System.out.print(month + "월의 날수는 " + day);
+	}
+
+}
+	</pre>
+<form>
+  <input type="button" value="닫기" onclick="history.back()">
+</form>
+	</section>
+	</body>
+</html>

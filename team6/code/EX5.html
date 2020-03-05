@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> EX5 </title>
+	<meta charset="euc-kr" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+	<section id="code" class="container">
+	<header>
+	<h3> 성적 평균 계산하기 </h3>
+	</header>
+	<pre>
+import java.util.*;
+public class average {
+
+	public static void main(String[] args) {
+		final int student = 5;
+		int total = 0;
+		Scanner input = new Scanner(System.in);
+
+		int[] scores = new int[student];
+
+		for (int i = 0; i < scores.length; i++){
+			System.out.print("성적을 입력하시오:");
+			scores[i] = input.nextInt();
+		}
+
+		for (int i = 0; i < scores.length; i++)
+			total += scores[i];
+
+		System.out.print("평균 성적은 " + total / student + "입니다");
+	}
+
+}
+	</pre>
+<form>
+  <input type="button" value="닫기" onclick="history.back()">
+</form>
+	</section>
+	</body>
+</html>

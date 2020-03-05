@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> EX1 </title>
+	<meta charset="euc-kr" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+	<section id="code" class="container">
+	<header>
+	<h3> 2차 방정식 근 계산하기 </h3>
+	</header>
+	<pre>
+	
+public class QuadraticEq {
+
+	public static void main(String[] args) {
+		double b = -3.0;
+		double c = 2.0;
+
+		double disc = b * b -4*c;
+		double sqr = Math.sqrt(disc);
+
+		double r1 = (-b + sqr) / 2.0;
+		double r2 = (-b - sqr) / (2.0);
+
+		System.out.println("근은 " + r1);
+		System.out.println("근은 " + r2);
+	}
+
+}
+	</pre>
+<form>
+  <input type="button" value="닫기" onclick="history.back()">
+</form>
+	</section>
+	</body>
+</html>

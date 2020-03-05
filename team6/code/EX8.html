@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> EX8 </title>
+	<meta charset="euc-kr" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+	<section id="code" class="container">
+	<header>
+	<h3> 배열에 저장된 값의 평균 구하기</h3>
+	</header>
+	<h4> ArrayProc.java </h4>
+	<pre>
+import java.util.Scanner;
+
+public class ArrayProc {
+
+	public void getValues(int[] array) {
+		Scanner scan = new Scanner(System.in);
+		for (int i = 0; i < array.length; i++) {
+			System.out.print("성적을 입력하시오:");
+			array[i] = scan.nextInt();
+		}
+	}
+
+	public double getAverage(int[] array) {
+		double total = 0;
+		for (int i = 0; i < array.length; i++)
+			total += array[i];
+		return total / array.length;
+	}
+}
+	</pre>
+<hr>
+	<h4> ArrayProcTest.java </h4>
+	<pre>
+public class ArrayProcTest {
+	final static int STUDENTS = 5;
+
+	public static void main(String[] args) {
+		int[] scores = new int[STUDENTS];
+		ArrayProc obj = new ArrayProc();
+		obj.getValues(scores);
+		System.out.println("평균은 = " + obj.getAverage(scores));
+	}
+}
+	</pre>
+<form>
+  <input type="button" value="닫기" onclick="history.back()">
+</form>
+	</section>
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> EX7 </title>
+	<meta charset="euc-kr" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+	<section id="code" class="container">
+	<header>
+	<h3> Television 생성자</h3>
+	</header>
+	<h4> Television.java </h4>
+	<pre>
+public class Television {
+	private int channel;
+	private int volume;
+	private boolean onOff;
+
+	Television(int c, int v, boolean o) {
+	     channel = c;
+	     volume = v;
+	     onOff = o;
+	}
+
+	void print() {
+	     System.out.println("채널은 " + channel + "이고 볼륨은 " + volume + "입니다.");
+	}
+}
+	</pre>
+<hr>
+	<h4> TelevisionTest.java </h4>
+	<pre>
+public class TelevisionTest {
+	public static void main(String[] args){
+		Television myTv = new Television(7, 10, true);
+		myTv.print();
+		Television yourTv = new Television(11, 20, true);
+		yourTv.print();		
+	}
+}
+	</pre>
+<form>
+  <input type="button" value="닫기" onclick="history.back()">
+</form>
+	</section>
+	</body>
+</html>
